@@ -96,14 +96,14 @@ class Model {
   static listAsc(input){
     var fs = require('fs')
     this.list(data =>{
-      data.sort(function(a, b){return a-b});
-      console.log(data);
-      // fs.writeFile("data.json", JSON.stringify(data), 'utf8', function(err) {
-      //   if (err) {
-      //     return console.log(err);
-      //   }
-      //   console.log("The file uncompleted");
-      // });
+      let hasil = data.sort(function(a, b){return a-b});
+
+      fs.writeFile("data.json", JSON.stringify(hasil), 'utf8', function(err) {
+        if (err) {
+          return console.log(err);
+        }
+        console.log("The file Sorted ASC");
+      });
     })
   }
 
