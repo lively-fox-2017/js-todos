@@ -1,1 +1,32 @@
-
+[
+    {
+        "id": 1,
+        "todo": "something to do",
+        "isComplete": true,
+        "dateCreated": "Wed, 27 Sep 2017 14:45:24 GMT",
+        "dateCompleted": "Wed, 27 Sep 2017 15:01:32 GMT",
+        "tags": [
+            "ninja",
+            "heboh"
+        ]
+    },
+    {
+        "id": 2,
+        "todo": "another thing to do",
+        "isComplete": true,
+        "dateCreated": "Wed, 27 Sep 2017 14:45:46 GMT",
+        "dateCompleted": "Wed, 27 Sep 2017 15:01:37 GMT",
+        "tags": []
+    },
+    {
+        "id": 3,
+        "todo": "another common task",
+        "isComplete": false,
+        "dateCreated": "Wed, 27 Sep 2017 15:01:51 GMT",
+        "dateCompleted": null,
+        "tags": [
+            "cumi",
+            "ninja"
+        ]
+    }
+]
