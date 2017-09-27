@@ -1,1 +1,7 @@
-
+[
+  {"task" : "Bikin aplikasi"},
+  {"task" : "add"},
+  {"task" : "bikin branch"},
+  {"task" : "commit"},
+  {"task" : "push"},
+]
