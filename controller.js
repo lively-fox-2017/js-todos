@@ -11,6 +11,7 @@ class Controller {
 			case 'list' : View.list(Model.list_list()); break;
 			case 'add'  : Model.addAdd(command[1]);break; 
 			case 'task' : Model.task(command[1]);break;
+			case 'delete' : Model.delete(command[1]);break;
 		}
 	}
 
