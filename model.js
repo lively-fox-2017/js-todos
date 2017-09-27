@@ -92,9 +92,13 @@ class Model {
   static listAsc(input){
     var fs = require('fs')
     this.list(data =>{
-      let hasil = data.sort(function(a, b){return a-b});
-
-      fs.writeFile("data.json", JSON.stringify(hasil), 'utf8', function(err) {
+      // console.log(data);
+      data.sort(function compare(a, b) {
+        var dateA = new Date(a.date);
+        var dateB = new Date(b.date);
+        return dateA - dateB;
+        });
+        fs.writeFile("data.json", JSON.stringify(data), 'utf8', function(err) {
         if (err) {
           return console.log(err);
         }
