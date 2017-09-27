@@ -51,6 +51,26 @@ class View {
     }
     this.list(list);
   }
+
+  addTagToTask(data){
+    if(data.status){
+      let pesan = `${data.data.tags} telah ditambahkan pada aktifitas \'${data.data.nama}\'`;
+      console.log(pesan);
+    }else{
+      console.log('id tidak terdaftar');
+    }
+  }
+
+  getTaskWithTag(data){
+    if(data.status){
+      console.log('To Do\'s with searched tag :');
+      for(let i =0; i<data.data.length; i++){
+        console.log(`${data.data[i].id} [${data.data[i].done}] ${data.data[i].nama} tags <${data.data[i].tags}>`);
+      }
+    }else{
+      console.log('404 Not Found');
+    }
+  }
 }
 
 module.exports = View;

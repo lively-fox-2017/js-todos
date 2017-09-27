@@ -23,7 +23,15 @@ class Controller {
     }else if(command[0] == 'complete'){
       route.markAsComplete(command[1]);
     }else if(command[0] == 'uncomplete'){
-      route.markAsUncomplete(command[1])
+      route.markAsUncomplete(command[1]);
+    }else if(command[0].slice(0,4)=='list' && command[0].slice(4,command[0].length) == ':outstanding'){
+      route.allListByDate(command[1] || '');
+    }else if(command[0].slice(0,4)=='list' && command[0].slice(4,command[0].length) == ':completed'){
+      route.allCompletedListByDate(command[1] || '');
+    }else if(command[0]=='tag'){
+      route.addTagToTask(command[1], command.slice(2, command.length));
+    }else if(command[0].slice(0,6)=='filter'){
+      route.filterByTag(command[0].slice(7,command[0].length));
     }
   }
 
@@ -61,6 +69,28 @@ class Controller {
   markAsUncomplete(id){
     let status = this.models.markAsUncomplete(id);
     this.views.markAsUncomplete(status, this.models.getAllList());
+  }
+
+  allListByDate(opt){
+    let data = this.models.getAllTaskOrderedByDate(opt);
+    this.views.list(data)
+  }
+
+  allCompletedListByDate(opt){
+    let data = this.models.getAllTaskCompletedOrderedByDate(opt);
+    this.views.list(data)
+  }
+
+  addTagToTask(id, tags){
+    let status = this.models.addTagToTask(id, tags);
+    this.views.addTagToTask(status);
+
+  }
+
+  filterByTag(tag){
+    //console.log(tag);
+    let res = this.models.getTaskWithTag(tag);
+    this.views.getTaskWithTag(res);
   }
 }
 

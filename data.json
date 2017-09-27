@@ -1,9 +1,27 @@
 [{
   "id": 1,
   "nama": "bersihin wc",
-  "done" : "X"
+  "done": "X",
+  "created": "2014-09-27T12:01:29.746Z",
+  "finished": "2017-09-27T12:33:11.749Z",
+  "tags": ["bersih", "wajib"]
 }, {
   "id": 2,
   "nama": "Cek keamaanan",
-  "done" : " "
+  "done": "X",
+  "created": "2015-09-27T12:01:29.746Z",
+  "finished": "2017-09-27T12:37:48.617Z",
+  "tags": ["bank", "hobi", "panjang tangan", "aman"]
+}, {
+  "id": 3,
+  "nama": "belajar ternak tuyul",
+  "done": " ",
+  "created": "2017-09-27T12:01:29.746Z",
+  "finished": ""
+}, {
+  "id": 4,
+  "nama": "belajar memanjat pohon",
+  "done": " ",
+  "created": "2017-09-27T12:30:33.915Z",
+  "finished": ""
 }]
