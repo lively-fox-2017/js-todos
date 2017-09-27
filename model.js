@@ -20,14 +20,8 @@ class Model {
         task:input
       })
       var simpan = JSON.stringify(dataParse)
-    fd.writeFile("data.json", simpan, (err, tersimpan)=>{
-      if(err) {
-        console.log('data gagal disimpan');
-      }
-      else {
-        console.log('Added '+ input + ' to your TO DO list.....');
-      }
-    })
+    fd.writeFileSync('data.json', simpan)
+    return input
   }
 
   static temukan(input) {

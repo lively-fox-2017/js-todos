@@ -18,7 +18,8 @@ class Controller {
 
     if(command[0] == 'add') {
       var input = command[1]
-      Model.tambahData(input)
+      data = Model.tambahData(input)
+      View.tampilTambahData(data)
     }
 
     if(command[0] == 'find') {
