@@ -135,6 +135,17 @@ class Model {
         }
       }
     }
+    if(data.length > 0) {
+      for (var i = 0; i < data.length; i++) {
+        for (var j = i; j < data.length; j++) {
+          if (Date.parse(data[i].createdAt) < Date.parse(data[j].createdAt)) {
+            var temp = data[i];
+            data[i] = data[j];
+            data[j] = temp;
+          }
+        }
+      }
+    }
     return data;
   }
   save(data) {

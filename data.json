@@ -27,7 +27,7 @@
   "task": "push",
   "createdAt": "2008-05-10T03:53:40-07:00",
   "completeAt": "",
-  "tag": []
+  "tag": ["git"]
 }, {
   "id": "6",
   "task": "tambah pekerjaan ",
