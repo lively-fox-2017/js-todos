@@ -1,13 +1,42 @@
+const View = require('./view');
+const Model = require('./model');
+
 class Controller {
+  constructor() {
+    this.model = new Model('data.json');
+  }
+
   help() {
-    console.log('$ node todo.js');
-    console.log('$ node todo.js help');
-    console.log('$ node todo.js list');
-    console.log('$ node todo.js add <task_content>');
-    console.log('$ node todo.js task <task_id>');
-    console.log('$ node todo.js delete <task_id>');
-    console.log('$ node todo.js complete <task_id>');
-    console.log('$ node todo.js uncomplete <task_id>');
+    View.help();
+  }
+
+  list() {
+    View.list(this.model.data);
+  }
+
+  add(newData) {
+    this.model.add(newData);
+    View.addedRespon(newData);
+  }
+
+  delete(taskId) {
+    let task = this.model.delete(taskId);
+    View.deletedRespon(taskId, task);
+  }
+
+  find(taskId) {
+    let task = this.model.findTask(taskId);
+    View.findRespon(taskId, task);
+  }
+
+  complete(taskId) {
+    let task = this.model.checkComplete(taskId);
+    View.completeRespon(taskId, task);
+  }
+
+  uncomplete(taskId) {
+    let task = this.model.checkUncomplete(taskId);
+    View.uncompleteRespon(taskId, task);
   }
 }
 
