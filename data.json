@@ -1,1 +1,31 @@
-
+[
+  {
+    "id": 1,
+    "task": "Bikin Aplikasi",
+    "complete": true
+  },
+  {
+    "id": 2,
+    "task": "Bikin Tomat",
+    "complete": false
+  },
+  {
+    "id": 3,
+    "task": "Bikin Cabe",
+    "complete": true
+  },
+  {
+    "id": 4,
+    "task": "Bikin Sambel",
+    "complete": false
+  },
+  {
+    "id": 5,
+    "task": "cretmen",
+    "complete": true
+  },
+  {
+    "id": 6,
+    "task": "boker"
+  }
+]
