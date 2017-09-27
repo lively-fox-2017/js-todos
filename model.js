@@ -114,6 +114,27 @@ class Model {
       }
     });
   }
+  viewDataByCreated(param,cb){
+    // console.log(param);
+    fs.readFile(path, 'utf8', (err, data) => {
+      if (!err) {
+        let arr=JSON.parse(data);
+        if (param.toLowerCase()=='asc') {
+          arr.sort(function(a, b){
+            return new Date(a.date_crated) - new Date(b.date_crated);
+          })
+        } else {
+          arr.sort(function(a, b){
+            return new Date(b.date_crated) - new Date(a.date_crated);
+          })
+        }
+        // console.log(newArr);
+        cb(err,arr);
+      } else {
+        throw err;
+      }
+    })
+  }
   readDataByStatus(param,cb){
     // console.log(param);
     fs.readFile(path, 'utf8', (err, data) => {
@@ -139,7 +160,7 @@ class Model {
             i++;
             if (i==index) {
               // console.log('----------',dataTags);
-              let y={"status":temp.status,"task":temp.task,"tags":dataTags};
+              let y={"status":temp.status,"task":temp.task,"tags":dataTags,"date_crated":temp.date_crated};
               return y;
             } else {
               return temp;

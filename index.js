@@ -28,6 +28,10 @@ if (command[0]=='complete') {
 if (command[0]=='uncomplete') {
   controller.setUnComplete(Number(command[1]));
 } else
+if (command[0]=='list:created') {
+  // console.log(command[1]);
+  controller.viewDataByCreated(command[1]);
+} else
 if (command[0]=='list:complete') {
   controller.viewDataComplete('x');
 } else

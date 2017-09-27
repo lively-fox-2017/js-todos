@@ -7,6 +7,9 @@ class View {
     console.log('node todo.js delete <task_id>');
     console.log('node todo.js complete <task_id>');
     console.log('node todo.js uncomplete <task_id>');
+    console.log('node todo.js list:created <asc><asc>');
+    console.log('node todo.js list:complete <task_id>');
+    console.log('node todo.js list:uncomplete <task_id>');
     console.log('node todo.js tags <task_id> <tag1>,<tag2>');
     console.log('node todo.js filter:<tag1>,<tag2>');
   }
@@ -23,7 +26,7 @@ class View {
       console.log('No data to showed!');
     } else {
       for (var i = 0; i < data.length; i++) {
-        console.log(`${i+1}. [${data[i].status}] ${data[i].task}, tags:${data[i].tags}`);
+        console.log(`${i+1}. [${data[i].status}] ${data[i].task}, tags:[${data[i].tags}], date_crated:${data[i].date_crated}`);
       }
     }
   }

@@ -20,7 +20,7 @@ class Controller {
     });
   }
   addData(data){
-    let dataObj={"status":" ","task":data}
+    let dataObj={"status":" ","task":data,"tags":" ","date_crated":Date()}
     model.addData(dataObj,(err,info)=>{
       if (!err) {
         console.log(info);
@@ -64,6 +64,15 @@ class Controller {
         throw err;
       }
     })
+  }
+  viewDataByCreated(param){
+    model.viewDataByCreated(param,(err,data)=>{
+      if (!err) {
+        return view.data(data);
+      } else {
+        throw err;
+      }
+    });
   }
   viewDataComplete(param){
     model.readDataByStatus(param,(err,data)=>{
