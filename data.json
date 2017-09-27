@@ -1,1 +1,37 @@
-[{"id":"1","task":"Bikin aplikasi","createdAt":"2012-05-10T03:53:40-07:00","completeAt":"2012-05-10T03:53:40-07:00"},{"id":"2","task":"add","createdAt":"2012-05-10T03:53:40-07:00","completeAt":""},{"id":"3","task":"bikin branch","createdAt":"2012-05-10T03:53:40-07:00","completeAt":""},{"id":"4","task":"commit","createdAt":"2012-05-10T03:53:40-07:00","completeAt":""},{"id":"5","task":"push","createdAt":"2012-05-10T03:53:40-07:00","completeAt":""},{"id":"7","task":"tambah kerjaan ","createdAt":"2017-09-27T10:02:48.893Z","completeAt":"2017-09-27T10:33:59.859Z"}]
+[{
+  "id": "1",
+  "task": "Bikin aplikasi",
+  "createdAt": "2012-05-10T03:53:40-07:00",
+  "completeAt": "2012-05-10T03:53:40-07:00",
+  "tag": []
+}, {
+  "id": "2",
+  "task": "add",
+  "createdAt": "2011-05-10T03:53:40-07:00",
+  "completeAt": "",
+  "tag": ["git", "github"]
+}, {
+  "id": "3",
+  "task": "bikin branch",
+  "createdAt": "2010-05-10T03:53:40-07:00",
+  "completeAt": "",
+  "tag": []
+}, {
+  "id": "4",
+  "task": "commit",
+  "createdAt": "2009-05-10T03:53:40-07:00",
+  "completeAt": "",
+  "tag": []
+}, {
+  "id": "5",
+  "task": "push",
+  "createdAt": "2008-05-10T03:53:40-07:00",
+  "completeAt": "",
+  "tag": []
+}, {
+  "id": "6",
+  "task": "tambah pekerjaan ",
+  "createdAt": "2017-09-27T11:13:56.183Z",
+  "completeAt": "",
+  "tag": ["kuda", "sapi", "kambing"]
+}]

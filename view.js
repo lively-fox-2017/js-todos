@@ -23,7 +23,7 @@ class View {
       if (dataList[i].completeAt !== "") {
         completed = "[x]"
       }
-      string += completed + " " + dataList[i].id + '. ' + dataList[i].task + "\n";
+      string += completed + " " + dataList[i].id + '. ' + dataList[i].task + "["+dataList[i].tag +"]"+ "\n";
     }
     return string;
   }
