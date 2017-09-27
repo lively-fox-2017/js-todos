@@ -5,11 +5,15 @@ const Model = require('./model')
 class Controller {
 
 	static menu(command){
-		switch(command){
+		//console.log(command)
+		switch(command[0]){
 			case 'help' : View.help(); break;
-			case 'list' : View.viewList(Model.list()); break;
+			case 'list' : View.list(Model.list_list()); break;
+			case 'add'  : Model.addAdd(command[1]);break; 
 		}
 	}
+
+	
 
 }
 

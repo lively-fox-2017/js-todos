@@ -10,13 +10,31 @@ class Model {
 
 	// }
 
-	static list(){
-		let hasilList='';
+	static list_list(){
+		let result='';
 		
 		for (let i = 0;i<data.length;i++){
-			hasilList+= (i+1) + '. ' + data[i].Task+ '\n';
+			result+= (i+1) + '. ' + data[i].Task+ '\n';
 		}
-		return hasilList;
+		return result;
+	}
+
+	static addAdd(comment){
+		// console.log(data)
+		data.push({
+			Status : "[ ]",
+			Task : comment
+		})
+		
+		let save = JSON.stringify(data)
+
+		fs.writeFile('data.json', save,(err, saved)=>{
+			if(err){
+				console.log('data not save')
+			}else{
+				console.log(`Added "${comment}" to your TODO List...`)
+			}
+		})
 	}
 
 

@@ -12,8 +12,8 @@ class View {
 		console.log('7. uncomplete <task_id>')
 	}
 
-	static viewList(listTampil){
-		console.log(listTampil);
+	static list(toDoList){
+		console.log(toDoList);
 	}
 
 }
