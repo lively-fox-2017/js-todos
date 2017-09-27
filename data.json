@@ -1,7 +1,1 @@
-[
-  {"task" : "Bikin aplikasi"},
-  {"task" : "add"},
-  {"task" : "bikin branch"},
-  {"task" : "commit"},
-  {"task" : "push"},
-]
+[{"id":"1","task":"Bikin aplikasi","createdAt":"2012-05-10T03:53:40-07:00","completeAt":"2012-05-10T03:53:40-07:00"},{"id":"2","task":"add","createdAt":"2012-05-10T03:53:40-07:00","completeAt":""},{"id":"3","task":"bikin branch","createdAt":"2012-05-10T03:53:40-07:00","completeAt":""},{"id":"4","task":"commit","createdAt":"2012-05-10T03:53:40-07:00","completeAt":""},{"id":"5","task":"push","createdAt":"2012-05-10T03:53:40-07:00","completeAt":""},{"id":"7","task":"tambah kerjaan ","createdAt":"2017-09-27T10:02:48.893Z","completeAt":"2017-09-27T10:33:59.859Z"}]
