@@ -1,7 +1,11 @@
 class View {
   static tampilData(data){
     for (var i = 0; i < data.length; i++) {
-      console.log(`${i + 1} ${data[i].task}`)
+      if(data[i].status == true){
+      console.log(`${i + 1} [X] ${data[i].task}`)
+    } else {
+      console.log(`${i + 1} [ ]${data[i].task}`)
+    }
     }
   }
 
@@ -27,7 +31,7 @@ class View {
     console.log(`$ node todo.js complete <task_id> `);
     console.log(`$ node todo.js uncomplete <task_id>`);
   }
-  
+
 }
 
 module.exports = View

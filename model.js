@@ -56,7 +56,40 @@ class Model {
     })
   }
 
-  
+  static completed(input){
+    var fs = require('fs')
+    this.list(data =>{
+      for (var i = 0; i < data.length; i++) {
+        if(data[i].id===parseInt(input[1])){
+          let ubah = data[i].status =  true
+        }
+      }
+      fs.writeFile("data.json", JSON.stringify(data), 'utf8', function(err) {
+        if (err) {
+          return console.log(err);
+        }
+        console.log("The file completed");
+      });
+    })
+  }
+
+  static uncompleted(input){
+    var fs = require('fs')
+    this.list(data =>{
+      for (var i = 0; i < data.length; i++) {
+        if(data[i].id===parseInt(input[1])){
+          let ubah = data[i].status =  false
+        }
+      }
+      fs.writeFile("data.json", JSON.stringify(data), 'utf8', function(err) {
+        if (err) {
+          return console.log(err);
+        }
+        console.log("The file uncompleted");
+      });
+    })
+  }
+
 }
 
 

@@ -1,1 +1,1 @@
-[{"id":1,"task":"Bikin Aplikasi"},{"id":2,"task":"Main Node.Js"},{"id":3,"task":"Mas Mas Mas"}]
+[{"id":1,"task":"Bikin Aplikasi","status":true},{"id":2,"task":"Main Node.Js","status":false},{"id":3,"task":"Mas Mas Mas","status":false}]

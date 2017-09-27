@@ -29,8 +29,17 @@ function menu(command) {
         Model.delete(data)
       })
     break
-    default:
-      Controller.help()
+    case 'completed':
+      Model.completed(command,function(err,data){
+        View.completed(data)
+      })
+    break
+    case 'uncompleted':
+      Model.uncompleted(command,function(err,data){
+        View.uncompleted(data)
+      })
+    break
+    default:break;
   }
 }
 
