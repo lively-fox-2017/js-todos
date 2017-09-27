@@ -20,7 +20,6 @@ class Model {
 	}
 
 	static addAdd(comment){
-		// console.log(data)
 		data.push({
 			Status : "[ ]",
 			Task : comment
@@ -35,6 +34,10 @@ class Model {
 				console.log(`Added "${comment}" to your TODO List...`)
 			}
 		})
+	}
+
+	static task(id){
+		console.log(`${id}. ${data[(id-1)].Task}`) 
 	}
 
 

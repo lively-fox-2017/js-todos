@@ -10,10 +10,9 @@ class Controller {
 			case 'help' : View.help(); break;
 			case 'list' : View.list(Model.list_list()); break;
 			case 'add'  : Model.addAdd(command[1]);break; 
+			case 'task' : Model.task(command[1]);break;
 		}
 	}
-
-	
 
 }
 
