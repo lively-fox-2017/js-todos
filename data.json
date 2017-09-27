@@ -5,7 +5,10 @@
         "done": false,
         "created_date": "2017-09-27T14:58:33.386Z",
         "finish_date": null,
-        "tag": []
+        "tag": [
+            "tag1",
+            "tag2"
+        ]
     },
     {
         "id": 3,

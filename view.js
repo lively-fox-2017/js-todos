@@ -5,7 +5,7 @@ class View {
     console.log('$ node todo.js list');
     console.log('$ node todo.js list:created asc|desc');
     console.log('$ node todo.js list:completed asc|desc');
-    console.log('$ node todo.js list:tag <task_id> <tag_name_1> <tag_name_2> ... <tag_name_N>');
+    console.log('$ node todo.js tag <task_id> <tag_name_1> <tag_name_2> ... <tag_name_N>');
     console.log('$ node todo.js add <task_content>');
     console.log('$ node todo.js task <task_id>');
     console.log('$ node todo.js delete <task_id>');
@@ -65,7 +65,7 @@ class View {
 
   static tagRespon(taskId, task, tag) {
     if (task)
-      console.log(`Tag ged task "${task['task']}" with tags: ${tag}`);
+      console.log(`Tagged task "${task['task']}" with tags: ${tag}`);
     else
       console.log(`Task ${taskId} Not Found`);
   }
