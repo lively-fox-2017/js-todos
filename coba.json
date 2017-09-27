@@ -1,0 +1,23 @@
+[
+	{
+		"id": 1,
+		"todo": "makan",
+		"completed": false,
+		"createdAt": 0,
+		"completedAt": 0
+	},
+	{
+		"id": 2,
+		"todo": "minum",
+		"completed": false,
+		"createdAt": 0,
+		"completedAt": 0
+	},
+	{
+		"id": 3,
+		"todo": "makan makan",
+		"completed": false,
+		"createdAt": 0,
+		"completedAt": 0
+	}
+]
