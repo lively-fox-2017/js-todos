@@ -7,10 +7,8 @@ class Controller {
 	}
 	
 	list() {
-		// if(this.input === "help") {
-			let model = Model.aturList(this.input);
-			View.tampilList(model);
-		// }
+		let model = Model.aturList(this.input);
+		View.tampilList(model);
 	}	
 }
 
