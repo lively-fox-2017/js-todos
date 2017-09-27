@@ -16,6 +16,7 @@ class Model {
   static addTask(task) {
     //  let addData = JSON.stringify(task);
     string.push({
+      status: "[ ]",
       task: task
     });
     //  console.log(string);
