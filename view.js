@@ -3,7 +3,7 @@ class View {
     for (var i = 0; i < data.length; i++) {
       if(data[i].status == true){
       console.log(`${i + 1}. [X] ${data[i].task}, createAt : ${data[i].createAt}`)
-    } else {
+    } else{
       console.log(`${i + 1}. [ ] ${data[i].task}, createAt : ${data[i].createAt}`)
     }
     }

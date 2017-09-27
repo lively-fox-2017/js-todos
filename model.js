@@ -1,16 +1,12 @@
-
+var fs = require('fs')
 
 class Model {
 
   static list(cb) {
-    var fs = require('fs')
-    fs.readFile('data.json', 'utf8', function(err, data) {
-      if (!err) {
-        var temp = JSON.parse(data)
+    fs.readFile('data.json', function(err,data) {
+      if (err) throw err
+        let temp = JSON.parse(data)
         cb(temp)
-      } else {
-        console.log('Data Gagal Dibaca');
-      }
     })
   }
 
@@ -25,8 +21,8 @@ class Model {
       }
       newData.push(objTask);
       fs.writeFile("data.json", JSON.stringify(newData), 'utf8', function(err) {
-        if (!err) {
-        // console.log(err);
+        if (err) {
+        console.log(err);
         }
         console.log("The file was saved!");
       });

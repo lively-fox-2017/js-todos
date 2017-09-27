@@ -60,7 +60,7 @@ class Controller {
 let start = process.argv;
 let command = start.splice(2,start.length);
 // Dijoin agar menu dapat dibaca
-console.log(Controller.menu(command));
+Controller.menu(command);
 
 
 module.exports = Controller
