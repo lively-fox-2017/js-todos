@@ -2,22 +2,22 @@ class View {
   static tampilData(data){
     for (var i = 0; i < data.length; i++) {
       if(data[i].status == true){
-      console.log(`${i + 1} [X] ${data[i].task}`)
+      console.log(`${i + 1}. [X] ${data[i].task}, createAt : ${data[i].createAt}`)
     } else {
-      console.log(`${i + 1} [ ]${data[i].task}`)
+      console.log(`${i + 1}. [ ] ${data[i].task}, createAt : ${data[i].createAt}`)
     }
     }
   }
 
   static cariData(data){
     for (var i = 0; i < data.length-1; i++) {
-      console.log(`${data[0]} ${data[1]}`)
+      console.log(`${data[0]} ${data[1]} ${data[2]} `)
     }
   }
 
   static deleteData(data){
     for (var i = 0; i < data.length-1; i++) {
-      console.log(`Data yang dihapus adalah : ${data[0]} ${data[1]}`)
+      console.log(`Data yang dihapus adalah : ${data[0]} ${data[1]} ${data[2]}`)
     }
   }
 

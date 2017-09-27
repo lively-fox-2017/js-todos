@@ -1,3 +1,5 @@
+
+
 class Model {
 
   static list(cb) {
@@ -17,13 +19,14 @@ class Model {
     this.list(data => {
       let newData = data;
       let objTask = {
-        "id": data[data.length-1].id + 1,
-        "task": task
+        "id": data.length+1,
+        "task": task,
+        "createAt": new Date()
       }
       newData.push(objTask);
       fs.writeFile("data.json", JSON.stringify(newData), 'utf8', function(err) {
-        if (err) {
-          return console.log(err);
+        if (!err) {
+        // console.log(err);
         }
         console.log("The file was saved!");
       });
@@ -49,7 +52,7 @@ class Model {
       console.log(data);
       fs.writeFile("data.json", JSON.stringify(data), 'utf8', function(err) {
         if (err) {
-          return console.log(err);
+          // return console.log(err);
         }
         console.log("The file completed deleted");
       });
@@ -87,6 +90,20 @@ class Model {
         }
         console.log("The file uncompleted");
       });
+    })
+  }
+
+  static listAsc(input){
+    var fs = require('fs')
+    this.list(data =>{
+      data.sort(function(a, b){return a-b});
+      console.log(data);
+      // fs.writeFile("data.json", JSON.stringify(data), 'utf8', function(err) {
+      //   if (err) {
+      //     return console.log(err);
+      //   }
+      //   console.log("The file uncompleted");
+      // });
     })
   }
 
