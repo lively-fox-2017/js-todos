@@ -13,10 +13,11 @@ class View {
     }
   }
 
-  static listView(list){    
+  static listView(list){
     for (let i=0; i< list.length ; i++){
       let stsID =  (list[i].completed) ? '[X]':'[ ]'
-      console.log(`${list[i].id}. ${stsID}${list[i].todo}`);
+      let tag = list[i].tag.join(',')
+      console.log(`${list[i].id}. ${stsID}${list[i].todo} tag:${tag}`);
     }
   }
 
@@ -48,6 +49,13 @@ class View {
     console.log('ID not found');
   }
 
+  static tagID(tampil){
+    console.log(tampil);
+  }
+
+  static filterTag(data){
+    this.listView(data)
+  }
 
 }
 

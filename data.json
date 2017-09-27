@@ -4,8 +4,8 @@
 		"todo": "makan",
 		"completed": false,
 		"createdAt": "",
-		"completedAt": "" ,
-		"tag":[]
+		"completedAt": "",
+		"tag": []
 	},
 	{
 		"id": 2,
@@ -13,7 +13,10 @@
 		"completed": false,
 		"createdAt": "",
 		"completedAt": "",
-		"tag":[]
+		"tag": [
+			"makan",
+			"minum"
+		]
 	},
 	{
 		"id": 3,
@@ -21,7 +24,7 @@
 		"completed": false,
 		"createdAt": "",
 		"completedAt": "",
-		"tag":[]
+		"tag": []
 	},
 	{
 		"id": 4,
@@ -29,6 +32,6 @@
 		"completed": true,
 		"createdAt": "2017-09-27T14:44:24.693Z",
 		"completedAt": "",
-		"tag":[]
+		"tag": []
 	}
 ]

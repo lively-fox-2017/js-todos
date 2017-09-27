@@ -19,7 +19,8 @@ class Model {
       "todo": task,
       "completed": false,
       "createdAt": tgl.toISOString(),
-      "completedAt": 0
+      "completedAt": 0 ,
+      "tag" : []
     }
     data.push(todo)
     this.saveData(data)
@@ -80,7 +81,18 @@ class Model {
     return data
   }
 
+  static tagID(id,tag){
+    let data = this.getData()
+    data[id - 1].tag=tag
+    this.saveData(data)
+    return `Tagged task "${data[id - 1].todo}" with tags: ${tag.join(',')}`
+  }
 
+  static filterTag(filter){
+    let data = this.getData()
+    let filterData = data.filter( (a)=> a.tag.indexOf(filter)>-1 )
+    return filterData;
+  }
 
 }
 

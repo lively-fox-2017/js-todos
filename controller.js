@@ -45,7 +45,7 @@ class Controller {
           break
         case 'list:created':
           if (command[1]) {
-            if(command[1]=='asc'){
+            if (command[1] == 'asc') {
               View.listView(Model.listCreatedAsc())
             } else {
               View.listView(Model.listCreatedDesc())
@@ -54,18 +54,30 @@ class Controller {
             View.listView(Model.listCreatedAsc())
           }
           break
-          case 'list:completed':
-            if (command[1]) {
-              if(command[1]=='asc'){
-                View.listView(Model.listCompletedAsc())
-              } else {
-                View.listView(Model.listCompletedDesc())
-              }
+        case 'list:completed':
+          if (command[1]) {
+            if (command[1] == 'asc') {
+              View.listView(Model.listCompletedAsc())
             } else {
               View.listView(Model.listCompletedDesc())
             }
+          } else {
+            View.listView(Model.listCompletedDesc())
+          }
+          break
+        case 'tag':
+          if (command[1]) {
+            let tag = command.slice(2)
+            View.tagID(Model.tagID(command[1], tag))
+
+          }
+          break
+          case 'filter':
+            if (command[1]) {
+              View.filterTag(Model.filterTag(command[1]))
+            }
             break
-        
+
       }
     } else {
       View.helpView()
