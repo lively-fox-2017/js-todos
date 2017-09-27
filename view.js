@@ -1,5 +1,6 @@
 class View {
   static help() {
+    console.log('===================');
     console.log('node todo.js help');
     console.log('node todo.js list');
     console.log('node todo.js add <task_content>');
