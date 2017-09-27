@@ -7,6 +7,7 @@ class Controller {
 	static menu(command){
 		switch(command){
 			case 'help' : View.help(); break;
+			case 'list' : View.viewList(Model.list()); break;
 		}
 	}
 

@@ -1,4 +1,3 @@
-const Controller = require('./controller')
 
 class View {
 
@@ -13,8 +12,8 @@ class View {
 		console.log('7. uncomplete <task_id>')
 	}
 
-	static list(){
-
+	static viewList(listTampil){
+		console.log(listTampil);
 	}
 
 }
