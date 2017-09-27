@@ -1,0 +1,9 @@
+{
+	"help":"node index.js help",
+	"list":"node index.js list",
+	"add":"node index.js add <task_content>",
+	"task":"node index.js task <task_id>",
+	"delete":"node index.js delete <task_id>",
+	"complete":"node index.js complete <task_id>",
+	"uncomplete":"node index.js uncomplete <task_id>"		
+}
