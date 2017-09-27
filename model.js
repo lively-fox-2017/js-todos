@@ -6,7 +6,7 @@ class Model {
 		if (input[0] === "help" || !input[0]) {
 			arr.push("$ node index.js ", "$ node index.js help", "$ node index.js list", "$ node index.js add <task_content>",
 			"$ node index.js task <task_id>", "$ node index.js delete <task_id>", "$ node index.js complete <task_id>", "$ node index.js uncomplete <task_id>");
-		} else if (input[0] === "list" || !input[1]) {
+		} else if (input[0] === "list" && !input[1]) {
 			let read = JSON.parse(fs.readFileSync("data.json", "utf8"));
 			for (let i = 0; i < read.length; i++){
 				if (read[i].completed) {
