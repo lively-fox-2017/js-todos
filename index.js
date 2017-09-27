@@ -5,3 +5,4 @@ cliArguments.shift();
 cliArguments.shift();
 
 controller.handler(cliArguments);
+console.log(new Date());
