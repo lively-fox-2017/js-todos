@@ -32,6 +32,8 @@ class Controller {
       route.addTagToTask(command[1], command.slice(2, command.length));
     }else if(command[0].slice(0,6)=='filter'){
       route.filterByTag(command[0].slice(7,command[0].length));
+    }else{
+      route.help();
     }
   }
 

@@ -1,7 +1,7 @@
 'use strict'
 class View {
   help(data){
-    let output = '$$============================================$$\n\n';
+    let output = '$$==========AVAILABLE COMMAND=========$$\n\n';
     output += '$ node todo.js help\n'+
               '$ node todo.js list\n'+
               '$ node todo.js add <task_content>\n'+
