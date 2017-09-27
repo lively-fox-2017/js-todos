@@ -1,1 +1,38 @@
-
+[
+    {
+        "id": 1,
+        "task": "Membuat aplikasi",
+        "complete": true,
+        "created_at": "2017-09-27T15:02:17.724Z"
+    },
+    {
+        "id": 2,
+        "task": "Belajar callback",
+        "complete": true,
+        "created_at": "2017-09-27T15:02:17.724Z"
+    },
+    {
+        "id": 3,
+        "task": "Membuat game",
+        "complete": false,
+        "created_at": "2017-09-27T16:22:21.910Z"
+    },
+    {
+        "id": 4,
+        "task": "Membuat web",
+        "complete": false,
+        "created_at": "2017-09-27T16:29:07.196Z"
+    },
+    {
+        "id": 5,
+        "task": "Belajar",
+        "complete": false,
+        "created_at": "2017-09-27T16:37:38.421Z"
+    },
+    {
+        "id": 6,
+        "task": "Belajar masak",
+        "complete": false,
+        "created_at": "2017-09-27T16:37:43.137Z"
+    }
+]
