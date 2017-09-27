@@ -7,11 +7,15 @@ class View {
     string += 'node todo.js\n';
     string += 'node todo.js help\n';
     string += 'node todo.js list\n';
+    string += 'node todo.js list:created asc|desc\n';
+    string += 'node todo.js list:completed asc|desc\n';
     string += 'node todo.js add <task_content>\n';
     string += 'node todo.js task <task_id>\n';
     string += 'node todo.js delete <task_id>\n';
     string += 'node todo.js complete <task_id>\n';
     string += 'node todo.js uncomplete <task_id>\n';
+    string += 'node todo.js tag <task_id> <tag> <tag> ...\n';
+    string += 'node todo.js filter:<tag>\n';
 
     return string;
   }

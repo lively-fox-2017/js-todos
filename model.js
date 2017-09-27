@@ -146,7 +146,7 @@ class Model {
         }
       }
     }
-    return data;
+    return data.reverse();
   }
   save(data) {
     fs.writeFileSync(this.path, data);
