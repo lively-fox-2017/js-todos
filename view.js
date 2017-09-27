@@ -25,11 +25,14 @@ class View {
     console.log(`$ node todo.js`);
     console.log(`$ node todo.js help`);
     console.log(`$ node todo.js list`);
+    console.log(`$ node todo.js list:outstanding:asc`);
+    console.log(`$ node todo.js list:outstanding:desc`);
     console.log(`$ node todo.js add <task_content>`);
     console.log(`$ node todo.js find <task_id>`);
     console.log(`$ node todo.js delete <task_id>`);
     console.log(`$ node todo.js complete <task_id> `);
     console.log(`$ node todo.js uncomplete <task_id>`);
+
   }
 
 }

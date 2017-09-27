@@ -42,12 +42,12 @@ class Controller {
       break
       case 'list:outstanding:asc':
         Model.listAsc(command,data => {
-          View.listAsc(data)
+          View.list(data)
         })
       break
       case 'list:outstanding:desc':
         Model.listDesc(command,data => {
-          View.listDesc(data)
+          View.list(data)
         })
       break
       default:break;

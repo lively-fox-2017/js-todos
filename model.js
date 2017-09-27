@@ -107,6 +107,24 @@ class Model {
     })
   }
 
+  static listDesc(input){
+    var fs = require('fs')
+    this.list(data =>{
+      // console.log(data);
+      data.sort(function compare(b, a) {
+        var dateB = new Date(b.date);
+        var dateA = new Date(a.date);
+        return dateB - dateA;
+        });
+        fs.writeFile("data.json", JSON.stringify(data), 'utf8', function(err) {
+        if (err) {
+          return console.log(err);
+        }
+        console.log("The file Sorted DESC");
+      });
+    })
+  }
+
 }
 
 
