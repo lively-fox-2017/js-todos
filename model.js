@@ -2,6 +2,10 @@ const fs = require("fs");
 
 class Model {
 	static aturList(input){
+		if (fs.readFileSync("data.json", "utf8").length === 0) {
+			fs.writeFileSync('data.json', JSON.stringify([] , null, 2));
+		}
+		
 		let arr = [];
 		if (input[0] === "help" || !input[0]) {
 			arr.push("$ node index.js ", "$ node index.js help", "$ node index.js list", "$ node index.js add <task_content>",
