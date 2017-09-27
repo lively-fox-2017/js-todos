@@ -4,23 +4,12 @@ const fs = require('fs')
 
 class Controller {
 
-  static help() {
-    console.log(`$ node todo.js`);
-    console.log(`$ node todo.js help`);
-    console.log(`$ node todo.js list`);
-    console.log(`$ node todo.js add <task_content>`);
-    console.log(`$ node todo.js task <task_id>`);
-    console.log(`$ node todo.js delete <task_id>`);
-    console.log(`$ node todo.js complete <task_id> `);
-    console.log(`$ node todo.js uncomplete <task_id>`);
-  }
-
 }
 
 function menu(command) {
   switch(command[0]) {
     case 'help':
-      Controller.help()
+      View.help()
     break
     case 'list':
       Model.list(data => {
@@ -28,19 +17,24 @@ function menu(command) {
       })
     break
     case 'add':
-    // console.log(command[1]);
-      let dataObj={"task":command[1]}
-      // console.log(dataObj);
-      Model.add(dataObj)
-      // console.log('asdsadsadsa');
+      Model.add(command[1])
+    break
+    case 'find':
+      Model.find(command[1],data => {
+        View.cariData(data)
+    })
+    break
+    case 'delete':
+      Model.delete(command,function(err,data){
+        Model.delete(data)
+      })
     break
     default:
-      return 'Masukan Opt Menu'
+      Controller.help()
   }
 }
 
 let start = process.argv;
-// console.log(start.length);
 let command = start.splice(2,start.length);
 // Dijoin agar menu dapat dibaca
 menu(command)
