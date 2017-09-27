@@ -43,6 +43,10 @@ class Index {
 
 		if(temp[0] === 'uncomplete'){
 			control.uncompleteList(temp[1])
+		}
+
+		if(temp[0] === 'list:created'){
+			control.ascList()
 		}				
 		
 	}

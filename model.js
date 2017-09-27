@@ -28,9 +28,9 @@ class Model {
 		id = Object.keys(temp)
 		for(let i = 0; i<id.length; i++){
 			if(temp[id[i]][1]===true){
-				temp1 = id[i]+'.[x] '+temp[id[i]][0]
+				temp1 = id[i]+'.[x] '+temp[id[i]][0]+' '+temp[id[i]][2]
 			}else{
-				temp1 = id[i]+'.[ ] '+temp[id[i]][0]
+				temp1 = id[i]+'.[ ] '+temp[id[i]][0]+' '+temp[id[i]][2]
 			}
 			this.list.push(temp1)
 			temp1 = ''
@@ -125,6 +125,53 @@ class Model {
     	})	
 	}
 
+	compareList(){
+		let temp = ''
+		let hasil = ''
+		let key = []
+		let temp1 = []
+		let temp3 = []
+		this.readList()
+		//console.log(this.list)
+		temp = JSON.parse(fs.readFileSync('data.json'))
+		key = Object.keys(temp)
+		//console.log(key)
+		//console.log(temp[key[0]][0])
+
+		for(let i=0; i<key.length; i++){
+			temp1[i] = [key[i], temp[key[i]][0], temp[key[i]][1], temp[key[i]][2] ]
+		}
+
+		
+		//console.log(temp)
+		var swapped
+
+    	do {
+        	swapped = false;
+        	for (var i=0; i < temp1.length-1; i++) {
+            	if ((temp1[i][3] < temp1[i+1][3])) {
+                	var temp2 = temp1[i];
+                	temp1[i] = temp1[i+1];
+                	temp1[i+1] = temp2;
+                	swapped = true;
+            	}
+        	}
+    	} while (swapped)
+
+    	for(let i = 0; i<temp1.length; i++){
+			if(temp1[i][2]===true){
+				hasil = temp1[i][0]+'.[x] '+temp1[i][1]+' '+temp1[i][3]
+			}else{
+				hasil = temp1[i][0]+'.[ ] '+temp1[i][1]+' '+temp1[i][3]
+			}
+			temp3.push(hasil)
+			hasil = ''
+		}
+
+    	return temp3
+	}
 }
 
+  // let a = new Model()
+  // a.compareList()
 module.exports = Model

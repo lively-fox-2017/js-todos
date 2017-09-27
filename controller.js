@@ -48,6 +48,13 @@ class Controller {
 		this.a.uncompleteList(data)	
 	}
 
+	ascList(){
+		let temp = this.a.compareList()
+		this.b.tampilData(temp)
+	}
+
 }
 
+// let a = new Controller()
+// a.ascList()
 module.exports = Controller
