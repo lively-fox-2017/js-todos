@@ -38,6 +38,21 @@ class Controller {
     let task = this.model.checkUncomplete(taskId);
     View.uncompleteRespon(taskId, task);
   }
+
+  sortList(attr, order) {
+    let data = this.model.getSortedList(attr, order);
+    View.list(data);
+  }
+
+  addTag(taskId, tag) {
+    let data = this.model.addTag(taskId, tag);
+    View.tagRespon(taskId, data, tag);
+  }
+
+  filterByTag(tag) {
+    let data = this.model.filterByTag(tag);
+    View.list(data);
+  }
 }
 
 module.exports = Controller;

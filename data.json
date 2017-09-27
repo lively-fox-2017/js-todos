@@ -1,10 +1,26 @@
 [
     {
-        "task": "Bikin aplikasi",
-        "done": true
+        "id": 1,
+        "task": "Bikin Aplikasi",
+        "done": false,
+        "created_date": "2017-09-27T14:58:33.386Z",
+        "finish_date": null,
+        "tag": []
     },
     {
-        "task": "Main Node.js",
-        "done": false
+        "id": 3,
+        "task": "Pulang",
+        "done": false,
+        "created_date": "2017-09-27T14:59:04.502Z",
+        "finish_date": null,
+        "tag": []
+    },
+    {
+        "id": 4,
+        "task": "Mandi",
+        "done": false,
+        "created_date": "2017-09-27T14:59:36.686Z",
+        "finish_date": null,
+        "tag": []
     }
 ]
