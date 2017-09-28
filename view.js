@@ -11,12 +11,12 @@ class View {
         console.log('4. node index.js add <task_content>')
         console.log('5. node index.js task <task_id>')
         console.log('6. node index.js delete <task_id>')
-        console.log('7. node index.js complete')
-        console.log('8. node index.js uncomplete')
+        console.log('7. node index.js complete  <task_id>')
+        console.log('8. node index.js uncomplete  <task_id>')
     }
     static viewList(data) {
         for (let i = 0; i < data.length; i++) {
-            console.log(`${data[i].id}.` + `${data[i].task}`);
+            console.log(`${data[i].id}.` + `${data[i].complete} `+`${data[i].task}`);
         }
 
     }
@@ -41,11 +41,12 @@ class View {
 
     }
     static viewComplete(data) {
-        for (let i = 0; i < data.length; i++) {
-            if (data[i].complete) {
-                console.log(`${data[i].id}.`  + ' [x] '+`${data[i].task}`);
-            } 
-        }
+        console.log(data.task + ' completed')
+        console.log(`${data.id}.` + `${data.complete} ` + `${data.task}`);
+    }
+    static viewUncomplete(data) {
+        console.log(data.task + ' uncompleted')
+        console.log(`${data.id}.` + `${data.complete} ` + `${data.task}`);
     }
 
 

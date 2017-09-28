@@ -30,9 +30,12 @@ class Controller {
                 View.viewDelete(deleteData);
                 break;
             case 'complete':
-                // let deleteData = Model.delete(input.slice(1).join(""));
-                let dataComplete = Model.complition();
+                let dataComplete = Model.complition(input.slice(1).join(""));
                 View.viewComplete(dataComplete);
+                break;
+            case 'uncomplete':
+                let dataUncomplete = Model.uncomplition(input.slice(1).join(""));
+                View.viewUncomplete(dataUncomplete);
                 break;
 
         }
